@@ -28,11 +28,6 @@
     "autoload": {
         "psr-4": {
             "RServices\\SoftLogger\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "RServices\\SoftLogger\\Tests\\": "tests"
         },
         "files": [
             "src/helpers.php"
