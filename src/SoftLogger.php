@@ -12,7 +12,8 @@ class SoftLogger
         $time = "[".date('Y-m-d H:i:s')."] [$type]";
         if (file_exists($path = log_path($file)))
             $content = file_get_contents($path)."\n$time $content";
-        file_put_contents($path, "$time $content");
+        else $content = "$time $content";
+        file_put_contents($path, $content);
     }
 
 }
