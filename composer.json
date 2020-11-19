@@ -1,0 +1,59 @@
+{
+    "name": "rene-roscher/soft-logger",
+    "description": "Simple logger for many constructions",
+    "keywords": [
+        "rservices",
+        "soft-logger",
+        "laravel-logger",
+        "logger"
+    ],
+    "homepage": "https://github.com/rservices/soft-logger",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Rene Roscher",
+            "email": "r.roscher@r-services.eu",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "RServices\\SoftLogger\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RServices\\SoftLogger\\Tests\\": "tests"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RServices\\SoftLogger\\SoftLoggerServiceProvider"
+            ],
+            "aliases": {
+                "SoftLogger": "RServices\\SoftLogger\\SoftLoggerFacade"
+            }
+        }
+    }
+}
