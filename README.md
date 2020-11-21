@@ -30,5 +30,8 @@ __log($content = 'content', $file = 'logger.log', $type = 'ERROR');
 - __error()
 - log_path()
 
+## Todo
+- Events
+
 ## License
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
